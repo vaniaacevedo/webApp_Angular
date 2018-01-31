@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  padding-bottom: 30px;
+  padding-top: 70px;
+  font-family: lato;
+}
+
+.main-container{
+  margin-top: 0px;
+}
+
+.content {
+  padding: 20px;
+  text-align: justify;
+  font-size: 13px;
+}
+
+.content h2{
+  font-size:18px;
+}
+
+.content .btn {
+  font-size: 13px;
+}
+
+/*animations*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

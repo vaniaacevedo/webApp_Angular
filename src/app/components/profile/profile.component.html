@@ -1,0 +1,59 @@
+<h1>Log in</h1>
+<hr>
+
+<div class="container">
+  <div  class="alert alert-info alert-dismissible fade show" role="alert" *ngIf="error">
+    {{error}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+  <div class="row">
+    <form >
+      <div class="form-group">
+        <label for="exampleInputEmail1">To access the chat you must be loggedin.</label>
+        <input type="email" class="form-control" [(ngModel)]="user.email" name="user" placeholder="Enter email" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-secondary btn-block" (click)="signInWithEmail()">Login</button>
+    </form>
+
+  <div class="col-md-12" id="logins">
+    <button type="button" class="btn btn-info btn-block" (click)="signInWithTwitter()">
+      <i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</button>
+  </div>
+  <div class="col-md-12">
+    <button type="button" class="btn btn-danger btn-block" (click)="signInWithGoogle()">
+      <i class="fa fa-google" aria-hidden="true"></i> Login with Google</button>
+  </div>
+  <div class="col-md-12">
+    <button type="button" class="btn btn-primary btn-block"(click)="signInWithFacebook()">
+      <i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook</button>
+  </div>
+  <div class="col-md-12" id=signup>
+    <p>No account? <a [routerLink]="['/registration']"> You can register here.</a></p>
+  </div>
+  </div>
+</div>
+
+<div class="modal fade" id="passwordError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Error</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

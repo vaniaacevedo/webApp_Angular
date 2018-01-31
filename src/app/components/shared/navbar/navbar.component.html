@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/nysl_logo.png" width="30" height="30" alt=""><span class="1"> NYSL</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']">Home</a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['about']">About</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['contact']">Contact</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <li><button id=button class="btn btn-secondary btn-block"(click)="_ls.logout()">Logout</button></li>
+  </ul>
+  </div>
+</nav>
+
+<nav class="nav justify-content-center navbar-dark bg-dark fixed-bottom" id="nav-bottom">
+
+
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link" [routerLink]="['matches']"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Matches</a>
+  </li>
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link" [routerLink]="['chat']"><i class="fa fa-users" aria-hidden="true"></i> Chat</a>
+  </li>
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link" [routerLink]="['teams']"><i class="fa fa-id-badge" aria-hidden="true"></i> Teams</a>
+  </li>
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link" [routerLink]="['table']"><i class="fa fa-table" aria-hidden="true"></i> Table</a>
+  </li>
+  <!-- <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link" [routerLink]="['profile']"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a>
+  </li> -->
+</nav>

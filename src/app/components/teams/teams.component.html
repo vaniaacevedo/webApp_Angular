@@ -1,0 +1,13 @@
+<h1>Teams</h1>
+<hr>
+<div class="card-columns">
+  <div class="card animated fadeIn fast border-success" style="max-width:12rem;" *ngFor="let team of teams; let i= index">
+    <img class="card-img-top img-card" [src]="team.img" [alt]="team.name">
+    <div class="card-body">
+      <h5 class="card-title">{{team.name}}</h5>
+      <button (click)="showTeam(i)"
+      type="button" class="btn btn-success btn-block">Details</button>
+      <!--<a [routerLink]="['/team',i]" class="btn btn-primary btn-block">More ...</a>-->
+    </div>
+  </div>
+</div>

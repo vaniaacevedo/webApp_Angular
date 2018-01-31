@@ -1,0 +1,27 @@
+<h1>Table</h1>
+<hr>
+
+<table class="table table-striped table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Team</th>
+      <th scope="col">GS</th>
+      <th scope="col">GT</th>
+      <th scope="col">PTS</th>
+      <th scope="col">Years</th>
+      <th scope="col">Wins</th>
+      <th scope="col">Loses</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let team of teams">
+      <td><img [src]="team.img" class="img-fluid logo-fit" [alt]="team.name"></td>
+      <td>{{team.goals_score}}</td>
+      <td>{{team.goals_taken}}</td>
+      <td>{{team.points}}</td>
+      <td>{{team.years_in_league}}</td>
+      <td>{{team.wins}}</td>
+      <td>{{team.loses}}</td>
+    </tr>
+  </tbody>
+</table>

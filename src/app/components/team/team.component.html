@@ -1,0 +1,20 @@
+<h1>{{team.name}}</h1>
+<hr>
+
+<div class="row">
+  <div class="col-md-4">
+    <img [src]="team.img" class="img-fluid card-photo" [alt]="team.name">
+    <br><br>
+  </div>
+
+  <div class="col-md-8">
+    <p>Position: {{team.position}}</p>
+    <p>Years in League: {{team.years_in_league}}</p>
+    <p>Home Stadium: {{team.home_stadium}}</p>
+    <p>Goals score: {{team.goals_score}}</p>
+    <p>Goals taken: {{team.goals_taken}}</p>
+    <p>Points:{{team.points}}</p>
+    <p><a [routerLink]="['/teams']" class="btn btn-success">Back</a><p>
+  </div>
+
+</div>
