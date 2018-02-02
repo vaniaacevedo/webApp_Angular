@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ChatService } from '../../services/chat.service';
 
 @Component({
@@ -6,35 +6,26 @@ import { ChatService } from '../../services/chat.service';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent {
 
  message:string = "";
- element: any;
 
   constructor( public _cs: ChatService) {
 
-  this._cs.loadMessages().subscribe(() =>{
-
-    setTimeout( () =>{
-
-      this.element.scrollTop= this.element.scrollHeight;
-    },20)
-  });
+  this._cs.loadMessages().subscribe();
 }
 
-ngOnInit(){
-  this.element=document.getElementById('app-messages')
-}
+
 
   sendMessage(){
    console.log (this.message);
 
-   if( this.message.length === 0){
-     return;
-   }
-
-   this._cs.addMessage(this.message).then( () => this.message="")
-   .catch( (err) => console.error('error al enviar', err) );
+   // if( this.message.length === 0){
+   //   return;
+   // }
+   //
+   // this._cs.addMessage(this.message).then( () => this.message="")
+   // .catch( (err) => console.error('error al enviar', err) );
 
   }
 
